@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WWL</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Weather-Weather Lang</h1>
+    </div>
+    
+    <div class="search-container">
+        <input type="text" 
+               id="location" 
+               list="locationList" 
+               placeholder="Enter Location"
+               oninput="filterLocations(this.value)">
+        <datalist id="locationList"></datalist>
+        <button onclick="fetchData()">Get Weather</button>
+    </div>
+
+    <div class="weather-grid">
+        <div class="card">
+            <h2>Current Weather</h2>
+            <div class="main-weather">
+                <div>
+                    <p id="temperature"></p>
+                    <p id="description"></p>
+                    <p id="humidity"></p>
+                </div>
+                <img id="weatherIcon" alt="Weather Icon">
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Location Details</h3>
+            <p id="locationDetails"></p>
+            <p id="localTime"></p>
+        </div>
+
+        <div class="card">
+            <h3>Weather Conditions</h3>
+            <p id="feelslike"></p>
+            <p id="wind"></p>
+            <p id="visibility"></p>
+            <p id="uvIndex"></p>
+        </div>
+
+        <div class="card">
+            <h3>Astronomical Data</h3>
+            <p id="sunTimes"></p>
+            <p id="moonTimes"></p>
+            <p id="moonPhase"></p>
+        </div>
+
+        <div class="card">
+            <h3>Air Quality</h3>
+            <p id="airQuality"></p>
+        </div>
+    </div>
+
+    <script src="index.js" type="module"></script>
+</body>
+</html>
