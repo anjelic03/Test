@@ -10,11 +10,6 @@ Deliver a simple, friendly mini e-commerce experience for a local shoe boutique.
 - Recalculate cart totals automatically whenever products or add-ons change.
 - Provide clear subtotals, applied add-ons, and final total.
 
-## Non-Functional Requirements
-- Keep the UI lightweight and readable on desktop and tablet widths.
-- Use plain HTML, CSS, and vanilla JavaScript.
-- Organize assets so images sit inside `images/` for easy replacement.
-
 ## Key Design Patterns
 - **Product Factory (Creational):** centralizes how different shoe products are instantiated from catalog metadata.
 - **Decorator (Structural):** wraps `Product` instances with add-on behavior (gift wrap, discount, free shipping) without touching the base class.
@@ -146,8 +141,3 @@ CartState {
 5. Implement `Cart` with observer support and DOM observers (cart list, totals, badge).
 6. Connect UI interactions (add to cart, quantity adjustments, decorator toggles).
 7. Perform manual test passes for add/remove, toggles, and totals.
-
-## Future Enhancements
-- Persist cart to `localStorage` so refreshes keep selections.
-- Add form validation for checkout info.
-- Introduce promo code system driven by data instead of hard-coded percentage.
